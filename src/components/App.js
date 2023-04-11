@@ -3,7 +3,7 @@ import '../styles/App.css';
 
 const App = () => {
 
-  const [count, setCount] = useState(0);
+  let [count, setCount] = useState(0);
 
   return (
     <div className="ball">
@@ -11,10 +11,10 @@ const App = () => {
        className="count" ondoubleclick={() => {
          alert("cant edit it");
           }}>{count}</h1>
-      <button className="increment-button" onclick={() => setCount(count + 1) }>Increment</button>
+      <button className="increment-button" onclick={() => {setCount(count + 1) }}>Increment</button>
     </div>
-  );
-};
+  )
+}
 
 
 export default App;
